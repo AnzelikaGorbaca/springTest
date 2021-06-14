@@ -1,19 +1,17 @@
 package com.company.PeopleSpringProject.models;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
+
 @Entity
 public class TestPerson {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
     @NotEmpty(message = "Name should not to be empty")
     @Size(min = 2, max = 30, message = "Name should be between 2 and 30 characters")
