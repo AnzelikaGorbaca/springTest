@@ -35,4 +35,5 @@ public class MySpringMvcDispatcherSerlvetInitializer extends AbstractAnnotationC
         aContext.addFilter("hiddenHttpMethodFilter",
                 new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null ,true, "/*");
     }
+
 }
