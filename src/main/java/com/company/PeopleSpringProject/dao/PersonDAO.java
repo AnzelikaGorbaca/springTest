@@ -8,8 +8,6 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -33,7 +31,7 @@ public class PersonDAO {
     }
 
     public void save(Person person) {
-        jdbcTemplate.update("INSERT INTO Person VALUES(1, ?, ?, ?)", person.getName(), person.getAge(),
+        jdbcTemplate.update("INSERT INTO Person VALUES(id,?, ?, ?)", person.getName(), person.getAge(),
                 person.getEmail());
     }
 
